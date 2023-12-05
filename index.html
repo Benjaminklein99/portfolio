@@ -144,12 +144,13 @@
           <a href="" class="btn btn-2">Download CV</a>
         </div>
         <div class="contact-right">
-          <form>
+          <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <button type="submit" class="btn btn-2">Submit</button>
           </form>
+          <span id="msg"></span>
         </div>
       </div>
     </div>
@@ -172,6 +173,24 @@
       document.getElementById(tabName).classList.add("active-tab");
     }
 
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzKjzoWJUX_Rr4es3MBW65VdhwaorLfYpBtVUSOSjCYwLCLJQOkZE_irO0vMiGX8b3o/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = 'Message Sent Successfully'
+          setTimeout(() => {
+            msg.innerHTML = '';
+          }, 5000)
+          form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
   </script>
 </body>
 </html>

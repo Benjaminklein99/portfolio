@@ -355,6 +355,12 @@ form .btn-2 {
   cursor: pointer;
 }
 
+#msg {
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
+
 /* css for small screens */
 @media only screen and (max-width: 600px) {
   #header {
