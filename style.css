@@ -20,7 +20,7 @@ body {
   height: 100vh;
   background-image: url(images/me.png);
   background-position: right;
-  background-size: 900px;
+  background-size: 60vw;
   background-repeat: no-repeat;
 }
 
@@ -71,11 +71,11 @@ nav ul li a:hover::after {
 
 .header-text {
   margin-top: 20%;
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 .header-text h1 {
-  font-size: 60px;
+  font-size: 5vw;
   margin-top: 20px;
 }
 
@@ -363,27 +363,15 @@ form .btn-2 {
   display: block;
 }
 
-/* css for small screens */
-/* @media only screen and (max-width: 600px) {
-  #header {
-    background-image: url();
-  }
-
-  .header-text {
-    margin-top: 100%;
-    font-size: 16px;
-  }
-
-  .header-text h1 {
-    font-size: 30px;
-  }
-} */
-
 #popTech li {
   display: inline-block;
   padding-right: 20px;
   height: 15.25px
 }
+
+
+/* css for small screens */
+
 
 @media only screen and (max-width: 414px) {
 
@@ -545,10 +533,17 @@ form .btn-2 {
     transform: translateY(-10px);
   }
   
-  /* portfolio */
+  #popTech li {
+    display: inline-block;
+    padding-right: 10px;
+    height: 0vh;
+  }
+
+
+  /* my work */
   
   #portfolio {
-    padding: 50px 0;
+    padding: 35vh 0;
   }
   
   .work-list {
