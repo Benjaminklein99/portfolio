@@ -30,16 +30,16 @@ body {
 
 }
 
+.logo {
+  width: 125px;
+  margin-left: -4%;
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.logo {
-  width: 125px;
-  margin-left: -4%;
 }
 
 nav ul li {
@@ -375,7 +375,7 @@ form .btn-2 {
 /* css for small screens */
 
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 440px) {
 
   #header {
     background-size: 75vw;
@@ -386,12 +386,16 @@ form .btn-2 {
   .container {
     padding: 3vh 10vw 0;
     height: 50vh;
-
   }
 
   .logo {
     width: 15vh;
     margin-left: -15%;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 10vw
   }
 
   nav ul li {
